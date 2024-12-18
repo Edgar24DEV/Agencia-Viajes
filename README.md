@@ -48,3 +48,5 @@ Este proyecto está desarrollado con las siguientes tecnologías y herramientas:
 │   ├── acerca.html      # Información sobre la agencia
 │   └── contacto.html    # Formulario de contacto
 └── README.md            # Documentación del proyecto
+```
+![image](https://github.com/user-attachments/assets/94c82a91-87bb-4af0-afa7-c9b8058b76a0)
