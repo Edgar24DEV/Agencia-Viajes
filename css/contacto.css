@@ -1,0 +1,60 @@
+#contacto{
+    width: 60%;
+    display: flex;
+}
+
+form{
+    width: 60%;
+    margin-right: 20px;
+}
+
+h3{
+    float: left;
+    margin: 10px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+h2{
+    display: block;
+    
+}
+
+#t-contacto{
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+hr{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+#info{
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+footer hr{
+    width: 100%;
+    border: 1px solid white;
+}
+
+@media (max-width: 950px) {
+
+    form{
+        width: 100%;
+    }
+
+    #contacto{
+        width: 60%;
+        display: block;
+    }
+    
+}

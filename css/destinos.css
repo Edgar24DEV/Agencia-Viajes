@@ -1,0 +1,124 @@
+#articulos{
+    display: inline-block;
+    margin-left: 80px;
+}
+
+article{
+    width: 250px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 20px;
+    float: left;
+    
+}
+
+body{
+    width: 100%;
+    margin: 0px;
+    display: block;
+}
+
+article img{
+    width: 100%;
+    height: 250px;
+}
+
+.pais{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(182, 181, 181, 0.562);
+    border-radius: 0px 0px 5px 5px;
+    text-align: center;
+    padding: 5px;
+    
+}
+
+body h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 90px;
+    background-color: rgba(109, 131, 112, 0.767);
+    color: white;
+    font-weight: bold;
+}
+
+article {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+article:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+video{
+    margin: 0;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 100%; /* Evita que el video se desborde */
+    height: auto; /* Ajusta la altura automáticamente */
+    aspect-ratio: 1920/1080; /* Proporción estándar de video */
+}
+
+h2{
+    margin-top: 0;
+}
+
+/* Estilos para el contenedor de los controles del video */
+#nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #198754; /* Verde éxito (Bootstrap bg-success) */
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px; /* Ajusta al ancho deseado */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para los botones del reproductor */
+#nav input[type="button"] {
+    background-color: #343a40; /* Color oscuro (Bootstrap bg-dark) */
+    color: #ffffff; /* Texto blanco */
+    border: 1px solid #212529; /* Borde oscuro */
+    border-radius: 5px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover para los botones */
+#nav input[type="button"]:hover {
+    background-color: #495057; /* Gris más claro */
+    transform: scale(1.05);
+}
+
+/* Estilo para la etiqueta Volumen */
+#nav label {
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 576px) {
+    #nav {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    #nav input[type="button"] {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+}
+
+body {
+    background-color: #eebc7b; /* Arena claro */
+}
+
+

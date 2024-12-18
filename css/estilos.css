@@ -1,0 +1,76 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #00a859;
+    border-radius: 5px;
+}
+
+.card-img-top {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.enlaces p a{
+    text-decoration: none;
+    color: #00a859;
+}
+
+@keyframes animacion {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Subir un poco */
+    }
+    100% {
+        transform: translateY(0); /* Volver a la posición inicial */
+    } 
+}
+
+.animado{
+    animation: animacion 0.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+/* Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+
+header{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Negrita */
+}
+
+nav, button{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Negrita */
+}
