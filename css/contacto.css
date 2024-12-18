@@ -20,6 +20,11 @@ h2{
     
 }
 
+.input-invalido {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
 #t-contacto{
     display: block;
     justify-content: center;
