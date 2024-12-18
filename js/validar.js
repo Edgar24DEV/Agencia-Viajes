@@ -1,8 +1,12 @@
 function validarForm(e) {
     e.preventDefault();
-    let nombre = document.getElementById("nombre").value;
-    let email = document.getElementById("email").value;
-    let telefono = document.getElementById("telefono").value;
+    let nombreInput = document.getElementById("nombre");
+    let emailInput = document.getElementById("email");
+    let telefonoInput = document.getElementById("telefono");
+
+    let nombre = nombreInput.value;
+    let email = emailInput.value;
+    let telefono = telefonoInput.value;
 
     console.log("validarF");
 
@@ -11,10 +15,10 @@ function validarForm(e) {
     localStorage.setItem("email", email);
     localStorage.setItem("telefono", telefono);
 
-    validarCampos(nombre, email, telefono);
+    validarCampos(nombre, email, telefono, nombreInput, emailInput, telefonoInput);
 }
 
-function validarCampos(nombre, email, telefono) {
+function validarCampos(nombre, email, telefono, nombreInput, emailInput, telefonoInput) {
     console.log("validarCampos");
 
     let val1 = validarNombre(nombre);
@@ -22,6 +26,11 @@ function validarCampos(nombre, email, telefono) {
     let val3 = validarTelefono(telefono);
 
     let texto = document.getElementById("enviado");
+
+    // Aplicar estilos según validación
+    toggleInputStyle(nombreInput, val1);
+    toggleInputStyle(emailInput, val2);
+    toggleInputStyle(telefonoInput, val3);
 
     if (val1 && val2 && val3) {
         texto.innerText = "Se ha enviado correctamente";
@@ -36,19 +45,28 @@ function validarCampos(nombre, email, telefono) {
 // Función para validar el campo de nombre
 function validarNombre(nombre) {
     let patron = /^[a-zA-Z\s]+$/;
-    return patron.test(nombre); // Más conciso
+    return patron.test(nombre);
 }
 
 // Función para validar el campo de email
 function validarEmail(email) {
     let patron = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return patron.test(email); // Más conciso
+    return patron.test(email);
 }
 
 // Función para validar el campo de teléfono
 function validarTelefono(telefono) {
     let patron = /^\d{9}$/;
-    return patron.test(telefono); // Más conciso
+    return patron.test(telefono);
+}
+
+// Función para añadir o quitar clases
+function toggleInputStyle(input, isValid) {
+    if (isValid) {
+        input.classList.remove("input-invalido");
+    } else {
+        input.classList.add("input-invalido");
+    }
 }
 
 // Función para reiniciar el formulario y limpiar el almacenamiento
@@ -65,7 +83,6 @@ function reset() {
 }
 
 // Prellenar campos desde localStorage
-// Si se reinicia la página sin enviar el formulario se quedaran los datos guardados en el formulario.
 function prellenarCampos() {
     if (localStorage.getItem("nombre")) {
         document.getElementById("nombre").value = localStorage.getItem("nombre");
