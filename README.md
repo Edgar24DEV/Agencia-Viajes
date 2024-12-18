@@ -50,3 +50,11 @@ Este proyecto está desarrollado con las siguientes tecnologías y herramientas:
 └── README.md            # Documentación del proyecto
 ```
 ![image](https://github.com/user-attachments/assets/94c82a91-87bb-4af0-afa7-c9b8058b76a0)
+
+## 📋 Tareas futuras
+
+- [ ] Implementar un sistema de reservas en línea.
+- [ ] Añadir soporte para múltiples idiomas.
+- [ ] Integrar una API para obtener datos de destinos turísticos en tiempo real.
+- [ ] Mejorar la accesibilidad siguiendo estándares de WCAG.
+
